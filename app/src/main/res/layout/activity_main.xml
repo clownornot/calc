@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-98dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/operationField"
+        android:layout_width="377dp"
+        android:layout_height="75dp"
+        android:text="operation"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.256" />
+
+    <EditText
+        android:id="@+id/NumberField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculator"
+        app:layout_constraintVertical_bias="0.058"
+        tools:ignore="UnknownId">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/divide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperationClick"
+                android:text="/" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/multiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperationClick"
+                android:text="*" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperationClick"
+                android:text="-"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperationClick"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/quals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperationClick"
+                android:text="=" />
+
+            <Button
+                android:id="@+id/separate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberClick"
+                android:text="," />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/resultField"
+        android:layout_width="365dp"
+        android:layout_height="69dp"
+        android:text="Result"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
